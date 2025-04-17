@@ -1,7 +1,4 @@
-ifdef CONFIG_INLINE_OPTIMIZATION
-ccflags-y += -mllvm -inline-threshold=15000
-ccflags-y += -mllvm -inlinehint-threshold=10000
-endif
+# SPDX-License-Identifier: GPL-2.0-only
 ccflags-y += -I$(src)			# needed for trace events
 
 obj-$(CONFIG_ANDROID_BINDERFS)		+= binderfs.o
